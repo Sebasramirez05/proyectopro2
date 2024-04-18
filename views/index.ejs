@@ -1,13 +1,174 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilo.css">
+    <title>CV SEBASTIAN RAMIREZ</title>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Sebastian Jose Ramirez Garcia</p>
-    <p>V-30.039.942</p>
-    <p>Seccion 2</p>
+    <!-- SECCION INICIO -->
+    <section class="inicio" id="inicio">
+      <div class="contenido-seccion">
+          <div class="info">
+              <h1>SEBASTIAN RAMIREZ</h1>
+              <h2>ESTUDIANTE, EMPLEADO A TIEMPO PARCIAL, FUTURO PROGRAMADOR</h2>
+              <div class="redes">
+                  <a href="https://www.facebook.com/share/5ih1L5DaZMFqfcDz/?mibextid=qi2Omg" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="https://www.instagram.com/sebastianramirezjg?igsh=MWNmeG4zcnljdGp2aA==" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                  <a href="https://www.sebasuni05@gmail.com" target="_BLANK"><i class="fa-brands fa-google fa-lg"></i></a>
+                  <a href="https://github.com/Sebasramirez05?tab=repositories" target="_blank"><i class="fa-brands fa-github"></i></a>
+              </div>
+          </div>
+          <div class="foto">
+              <img src="img/foto.png" alt="foto sebastian">
+          </div>
+      </div>
+  </section>
+  <!-- SECCION SOBRE MI -->
+  <section class="sobremi" id="sobremi">
+      <div class="contenido-seccion">
+          <h2 class="titulo-seccion"></h2>
+          <h3>Detalles personales</h3>
+          <p class="especial">Soy una persona positiva, siempre dispuesto a dar el mejor trato posible</p>
+          <p>Mi mayor fuerte es la atencion al publico, aunque ademas tambien tengo conocimiento basico en computacion y en la actualidad estoy estudiando diferentes diferentes lenguajes de programacion, en un futuro me gudstaria ser programador</p>
+
+          <div class="fila">
+              <div class="col">
+                  <i class="fa-solid fa-user"></i>
+                  <span class="titulo-detalle">Perfil</span>
+                  <p>Sexo: Masculino Edad:21 años</p>
+              </div>
+              <div class="col">
+                  <i class="fa-solid fa-location-pin"></i>
+                  <span class="titulo-detalle">Lugar de Residencia</span>
+                  <p>San Juan de los Morros</p>
+                  <p>Guarico</p>
+                  <p>Venezuela</p>
+              </div>
+              <div class="col">
+                  <i class="fa-solid fa-flag"></i>
+                  <span class="titulo-detalle">Intereses</span>
+                  <p>Soy gran fan de la tecnología y las ciencias, me gusta saber como funciona el mundo mas alla de lo que está simple vista.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- SECCION HABILIDADES-->
+  <section class="habilidades" id="habilidades">
+        <div class="contenido-seccion">
+            <h2 class="titulo-seccion">Habilidades</h2>
+            <div class="container">
+                <div class="skill">
+                    <p><span>Ingles</span>90%</p>
+                    <div class="progress" style="--wth: 90%"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="skill">
+                    <p><span>C++</span>50%</p>
+                    <div class="progress" style="--wth: 50%"></div>
+                </div>
+            </div>
+                <div class="container">
+                    <div class="skill">
+                        <p><span>Python</span>40%</p>
+                        <div class="progress" style="--wth: 40%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </section>
+  <!-- SECCION RESUMEN -->
+  <section class="resumen" id="resumen">
+      <div class="contenido-seccion">
+          <h2 class="titulo-seccion">Preparacion y Experiencia</h2>
+          <div class="info">
+              <div class="col">
+                  <span class="titulo">Educación</span>
+                  <table>
+                      <tr>
+                          <td class="datos">
+                              <h3>2015 - 2020</h3>
+                          </td>
+                          <td rowspan="2" class="descripcion">
+                              Graduado satisfactoriamente de bachiller con buen promedio.
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <h4>Bachiller</h4>
+                              <p>U.E.C Leon Topel Wortman</p>
+                              <span class="promedio">17.47 PG</span>
+                          </td>
+                      </tr>
+                  </table>
+                  <table>
+                      <tr>
+                          <td class="datos">
+                              <h3>2022 - Actualidad</h3>
+                          </td>
+                          <td rowspan="2" class="descripcion">
+                              Estudiando actualmente ingenieria en informatica con el objetivo de obtener mas conocimientos y tener una vida laboral plena.
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <h4>Estudiante Ingeniería Informática</h4>
+                              <p>Universidad Nacional Experimental "Romulo Gallegos"</p>
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+              <div class="col">
+                  <span class="titulo">Experiencia Laboral</span>
+                  <table>
+                      <tr>
+                          <td class="datos">
+                              <h3>3 Años</h3>
+                          </td>
+                          <td rowspan="2" class="descripcion">
+                              He funcionado como cajero a tiempo parcial a la vez que tambien como reparador en los momentos que ha sido posible.
+                          </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              <h4>Multicopias C.A.</h4>
+                              <p>Cajero y reparador de computadoras</p>
+                             
+                          </td>
+                      </tr>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- SECCION CONTACTO -->
+  <section class="contacto" id="contacto">
+      <div class="contenido-seccion">
+          <h2 class="titulo-seccion"></h2>
+          <h3>Ponte en contacto ahora mismo!</h3>
+
+          <div class="fila">
+              <div class="col">
+                  <h2>
+                      <i class="fa-solid fa-phone"></i> Teléfono
+                  </h2>
+                  <span class="info-contacto">0412 - 4715414</span>
+              </div>
+              <div class="col">
+                  <h2>
+                      <i class="fa-solid fa-envelope"></i> Correo
+                  </h2>
+                  <span class="info-contacto">sebasuni05@gmail.com</span>
+              </div>
+              <div class="col">
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <script src="../app.js"></script>
   </body>
 </html>
