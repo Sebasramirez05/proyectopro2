@@ -43,14 +43,14 @@
               <div class="col">
                   <i class="fa-solid fa-location-pin"></i>
                   <span class="titulo-detalle">Lugar de Residencia</span>
-                  <p>San Juan de los Morros</p>
-                  <p>Guarico</p>
-                  <p>Venezuela</p>
+                  <p class="parrafito">San Juan de los Morros</p>
+                  <p class="parrafito">Guarico</p>
+                  <p class="parrafito">Venezuela</p>
               </div>
               <div class="col">
                   <i class="fa-solid fa-flag"></i>
                   <span class="titulo-detalle">Intereses</span>
-                  <p>Soy gran fan de la tecnología y las ciencias, me gusta saber como funciona el mundo mas alla de lo que está simple vista.</p>
+                  <p class="parrafito">Soy gran fan de la tecnología y las ciencias, me gusta saber como funciona el mundo mas alla de lo que está simple vista.</p>
               </div>
           </div>
       </div>
@@ -60,22 +60,31 @@
         <div class="contenido-seccion">
             <h2 class="titulo-seccion">Habilidades</h2>
             <div class="container">
-                <div class="skill">
-                    <p><span>Ingles</span>90%</p>
-                    <div class="progress" style="--wth: 90%"></div>
+                <div class="textico">
+                    <p>Ingles</p> <p>90%</p>
                 </div>
+                    <div class="progress">
+                        <div class="progress-value90"></div>
+                      </div>
+                
             </div>
             <div class="container">
-                <div class="skill">
-                    <p><span>C++</span>50%</p>
-                    <div class="progress" style="--wth: 50%"></div>
+                
+                <div class="textico">
+                    <p>C++</p> <p>50%</p>
                 </div>
+                    <div class="progress">
+                        <div class="progress-value50"></div>
+                      </div>
+               
             </div>
                 <div class="container">
-                    <div class="skill">
-                        <p><span>Python</span>40%</p>
-                        <div class="progress" style="--wth: 40%"></div>
+                    <div class="textico">
+                        <p>Python</p> <p>40%</p>
                     </div>
+                        <div class="progress">
+                            <div class="progress-value40"></div>
+                    
                 </div>
             </div>
         </div>
@@ -150,12 +159,33 @@
         <h2 class="titulo-seccion">Ponte en contacto ahora mismo!</h2>
         <h3>Ingresa tus datos en los formularios inferiores</h3>
         <form action="#" autocomplete="off">
-            <div class="formulario">
-                <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo">
-                <input type="email" name="email" placeholder="Ingresa tu correo" class="campo">
-                <textarea name="comentario" placeholder="Ingresa algun comentario que tengas"></textarea>
-                <input type="submit" name="enviar" value="Enviar Datos" class="btn-enviar">
-            </div>
+            <section class="formulario">
+
+                <div class="camp">
+                    <label for="name" class="titulito">Ingrese el nombre completo</label>
+                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo" id="name">
+                </div>
+
+                <div class="camp">
+
+                    <label for="email" class="titulito">Ingrese su correo</label>
+                    <input type="email" name="email" placeholder="Ingresa tu correo" class="campo">
+
+                </div>
+
+                <div class="camp">
+
+                    <label for="comen" class="titulito">Comentarios</label>
+                <textarea name="comentario" placeholder="Ingresa algun comentario que tengas" class="campo"></textarea>
+
+                </div>
+                
+
+
+                
+
+                <input type="submit" name="enviar" value="Enviar Datos" class="btn-enviar"> 
+            </section>
         </form>
       </div>
   </section>
