@@ -121,6 +121,7 @@ html{
     border: 2px solid hsl(0, 97%, 29%);
     line-height: 40px;
     border-radius: 50%;
+    transition: .3s ease-in-out;
 }
 .sobremi .contenido-seccion .fila .col i:hover{
     color: white;
@@ -181,6 +182,62 @@ html{
     height: 65%;
     background: #a10505 ;
 }
+.progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    height: 18px;
+    width: 300px;
+    margin-bottom: 10px;
+  }
+  
+  .progress-value90 {
+    animation: load90 3s normal forwards;
+    box-shadow: 0 10px 40px -10px hsl(0, 97%, 29%);
+    border-radius: 100px;
+    background: hsl(0, 97%, 29%);
+    height: 18px;
+    width: 0;
+  }
+
+
+  .progress-value50 {
+    animation: load50 3s normal forwards;
+    box-shadow: 0 10px 40px -10px hsl(0, 97%, 29%);
+    border-radius: 100px;
+    background: hsl(0, 97%, 29%);
+    height: 18px;
+    width: 0;
+  }
+  .progress-value40 {
+    animation: load40 3s normal forwards;
+    box-shadow: 0 10px 40px -10px hsl(0, 97%, 29%);
+    border-radius: 100px;
+    background: hsl(0, 97%, 29%);
+    height: 18px;
+    width: 0;
+  }
+  
+  @keyframes load90 {
+    0% { width: 0; }
+    100% { width: 90%; }
+  }
+  @keyframes load50 {
+    0% { width: 0; }
+    100% { width: 50%; }
+  }
+  @keyframes load40 {
+    0% { width: 0; }
+    100% { width: 40%; }
+  }
+  .textico{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
 
 /* SECCION RESUMEN */
 .resumen{
@@ -305,12 +362,23 @@ html{
 -moz-box-shadow: 0px 0px 7px 5px hsl(0, 66%, 30%);
 
 }
+.camp{
+    text-align: left;
+    display: flex;
+    width: 50%;
+    gap: 5px;
+    flex-direction: column;
+}
+.titulito{
+    font-weight: 900;
+    font-size: 20px;
+}
 .btn-enviar{
     width: 40%;
     background: #ffffff;
     padding: 3%;
     border:#000000;
-    height: 80px;
+    height: 30px;
     font-size: 16px;
     align-items: center;
 }
@@ -319,6 +387,16 @@ html{
     background-color: hsl(0, 97%, 29%);
     transition: .5s ease-in-out;
 }
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .parrafito{
+    font-size: 100px;
+  }
 
 /* SECCION RESPONSIVE */
 @media (max-width:480px){
@@ -368,78 +446,3 @@ html{
         display: block;
     }
 }
-.camp{
-    text-align: left;
-    display: flex;
-    width: 50%;
-    gap: 5px;
-    flex-direction: column;
-}
-.titulito{
-    font-weight: 900;
-    font-size: 20px;
-}
-.progress {
-    background: rgba(255,255,255,0.1);
-    justify-content: flex-start;
-    border-radius: 100px;
-    align-items: center;
-    position: relative;
-    display: flex;
-    height: 18px;
-    width: 300px;
-    margin-bottom: 10px;
-  }
-  
-  .progress-value90 {
-    animation: load90 3s normal forwards;
-    box-shadow: 0 10px 40px -10px hsl(0, 97%, 29%);
-    border-radius: 100px;
-    background: hsl(0, 97%, 29%);
-    height: 18px;
-    width: 0;
-  }
-
-
-  .progress-value50 {
-    animation: load50 3s normal forwards;
-    box-shadow: 0 10px 40px -10px hsl(0, 97%, 29%);
-    border-radius: 100px;
-    background: hsl(0, 97%, 29%);
-    height: 18px;
-    width: 0;
-  }
-  .progress-value40 {
-    animation: load40 3s normal forwards;
-    box-shadow: 0 10px 40px -10px hsl(0, 97%, 29%);
-    border-radius: 100px;
-    background: hsl(0, 97%, 29%);
-    height: 18px;
-    width: 0;
-  }
-  
-  @keyframes load90 {
-    0% { width: 0; }
-    100% { width: 90%; }
-  }
-  @keyframes load50 {
-    0% { width: 0; }
-    100% { width: 50%; }
-  }
-  @keyframes load40 {
-    0% { width: 0; }
-    100% { width: 40%; }
-  }
-  .textico{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .parrafito{
-    font-size: 100px;
-  }
