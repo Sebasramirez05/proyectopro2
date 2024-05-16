@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>CV SEBASTIAN RAMIREZ</title>
   </head>
   <body>
@@ -158,38 +159,28 @@
       <div class="contenido-seccion">
         <h2 class="titulo-seccion">Ponte en contacto ahora mismo!</h2>
         <h3>Ingresa tus datos en los formularios inferiores</h3>
-        <form action="#" autocomplete="off">
+        <form action="/form-contacto" autocomplete="off" method="post">
             <section class="formulario">
 
                 <div class="camp">
                     <label for="name" class="titulito">Ingrese el nombre completo</label>
-                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo" id="name">
+                    <input type="text" name="name" placeholder="Ingresa tu nombre" class="campo" id="name" required />
                 </div>
 
                 <div class="camp">
-
                     <label for="email" class="titulito">Ingrese su correo</label>
-                    <input type="email" name="email" placeholder="Ingresa tu correo" class="campo">
-
+                    <input type="email" name="email" placeholder="Ingresa tu correo" class="campo" required />
                 </div>
-
                 <div class="camp">
-
                     <label for="comen" class="titulito">Comentarios</label>
-                <textarea name="comentario" placeholder="Ingresa algun comentario que tengas" class="campo"></textarea>
-
+                <textarea name="mensaje" placeholder="Ingresa algun comentario que tengas" class="campo"></textarea>
                 </div>
-                
-
-
-                
-
-                <input type="submit" name="enviar" value="Enviar Datos" class="btn-enviar"> 
+                <input type="submit" name="enviar" value="Enviar Datos" class="btn-enviar" onclick="Confirmacionbtn()">
             </section>
         </form>
       </div>
   </section>
-
+  <script src="/javascripts/formulariobtn.js"></script>
   <script src="../app.js"></script>
   </body>
 </html>
