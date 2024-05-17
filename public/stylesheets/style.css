@@ -387,6 +387,13 @@ html{
     background-color: hsl(0, 97%, 29%);
     transition: .5s ease-in-out;
 }
+.warning{
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+    padding-top: 20px;
+}
 
 
 .container{

@@ -26,10 +26,6 @@ class ContactosController {
     const contactos = await this.contactosModel.obtenerAllContactos();
 
     console.log(contactos);
-
-    // Redireccionar al usuario a una página de confirmación
-
-    res.redirect("/");
   }
 }
 
