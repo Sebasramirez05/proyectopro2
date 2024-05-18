@@ -175,27 +175,9 @@
                 <textarea name="mensaje" id="mensaje" placeholder="Ingresa algun comentario que tengas" class="campo"></textarea>
                 </div>
                 <input type="submit" name="enviar" value="Enviar Datos" class="btn-enviar">
-                <p class="warning" id="warnings"></p>
             </section>
         </form>
       </div>
-      <script>
-        document.getElementById('submit-btn').addEventListener('click', async() => {
-            const form = document.getElementById('form');
-            const formData = new FormData(form);
-
-            const response = await fetch('/form-contacto', {
-                method: 'POST',
-                body:formData,
-            });
-
-            if (response.ok) {
-                console.log('formulario enviado con excito')
-            } else {
-                console.error('error al enviar el formulario')
-            }
-        });
-      </script>
   </section>
   <script src="../app.js"></script>
   </body>

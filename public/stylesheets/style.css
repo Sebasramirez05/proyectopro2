@@ -95,7 +95,7 @@ html{
     margin-top: 15px;
 }
 .sobremi .contenido-seccion p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: auto;
     color: #666;
 }
@@ -234,6 +234,7 @@ html{
     100% { width: 40%; }
   }
   .textico{
+    font-size: 1.5rem;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -265,6 +266,7 @@ html{
     width: 45%;
 }
 .resumen .contenido-seccion .info .col .titulo{
+    font-size: 1.3rem;
     display: inline-block;
     color: hsl(0, 97%, 29%);
     font-weight: bold;
@@ -302,6 +304,7 @@ html{
     font-weight: bold;
 }
 .resumen .contenido-seccion .info .col table .descripcion{
+    font-size: 1.2rem;
     border-left: 1px solid #ffffff;
     padding-left: 20px;
 }
