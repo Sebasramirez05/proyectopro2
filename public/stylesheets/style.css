@@ -405,6 +405,11 @@ html{
     font-size: 100px;
   }
 
+
+.form-contacto{
+    background-color: #000000;
+}
+
 /* SECCION RESPONSIVE */
 @media (max-width:480px){
     .sobremi .contenido-seccion .fila{

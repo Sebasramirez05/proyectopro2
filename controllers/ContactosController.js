@@ -26,6 +26,9 @@ class ContactosController {
     const contactos = await this.contactosModel.obtenerAllContactos();
 
     console.log(contactos);
+
+    // Enviar mensaje de confirmacion
+    res.send("Tu mensaje fue enviado con exito");
   }
 }
 
