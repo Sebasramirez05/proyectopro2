@@ -13,6 +13,7 @@
     "express": "^4.19.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "node-fetch": "^3.3.2",
     "sqlite3": "^5.1.7",
     "sweetalert2": "^11.11.0"
   }
