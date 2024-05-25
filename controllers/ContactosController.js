@@ -6,9 +6,20 @@ class ContactosController {
     this.add = this.add.bind(this);
   }
 
+  async obtenerIp() {
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      return data.ip; // Retorna la ip
+    } catch (error) {
+      console.error('Error al obtener la ip:', error);
+      return null; // Retorna null si hay un error
+    }
+  }
+
   async obtenerPais(ip) {
     try {
-      const response = await fetch('https://ipinfo.io/${ip}?token=1bf6a20a980ccf');
+      const response = await fetch('https://ipinfo.io/'+ip+'?token=1bf6a20a980ccf');
       const data = await response.json();
       return data.country; // Retorna el país
     } catch (error) {
@@ -28,9 +39,7 @@ class ContactosController {
     }
 
     // Guardar los datos del formulario
-    //let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-    //ip = ip.toString().replace('::ffff:', '');
-    const ip =req.socket.remoteAddress;
+    const ip = await this.obtenerIp();
     const fecha = new Date().toISOString();
     const pais = await this.obtenerPais(ip);
 
