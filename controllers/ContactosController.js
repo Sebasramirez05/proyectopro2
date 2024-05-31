@@ -21,7 +21,7 @@ class ContactosController {
    enviarCorreo(email, name, mensaje, EMAIL_USER, EMAIL_DESTINO1) {
     const mailOptions = {
       from: EMAIL_USER,
-      to: EMAIL_DESTINO1, // Agrega más destinatarios si es necesario
+      to: EMAIL_DESTINO1,
       subject: 'Nuevo registro de usuario',
       text: 'Nombre: '+name+'\nEmail: '+email+'\nMensaje: '+mensaje
     };
