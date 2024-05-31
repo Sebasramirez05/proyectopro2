@@ -1,10 +1,40 @@
 const ContactosModel = require("../models/ContactosModel");
+const nodemailer = require('nodemailer');
+const EMAIL_USER = process.env.EMAIL_USER;
+const EMAIL_PASS = process.env.EMAIL_PASS;
+const EMAIL_DESTINO1 = process.env.EMAIL_DESTINO1;
 
 class ContactosController {
   constructor() {
     this.contactosModel = new ContactosModel();
     this.add = this.add.bind(this);
+    this.transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: EMAIL_USER,
+        pass: EMAIL_PASS
+      }
+    });
   }
+
+
+   enviarCorreo(email, name, mensaje, EMAIL_USER, EMAIL_DESTINO1) {
+    const mailOptions = {
+      from: EMAIL_USER,
+      to: EMAIL_DESTINO1, // Agrega más destinatarios si es necesario
+      subject: 'Nuevo registro de usuario',
+      text: 'Nombre: '+name+'\nEmail: '+email+'\nMensaje: '+mensaje
+    };
+    this.transporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log('Correo enviado');
+      }
+    });
+  }
+
+
 
   async obtenerIp() {
     try {
@@ -28,33 +58,30 @@ class ContactosController {
     }
   }
 
+  
+  
   async add(req, res) {
     // Validar los datos del formulario
-
-    const { email, name, mensaje } = req.body;
-
-    if (!email || !name || !mensaje) {
-      res.status(400).send("Faltan campos requeridos");
-      return;
-    }
+      const { name, email, mensaje } = req.body;
+  
+  
 
     // Guardar los datos del formulario
     const ip = await this.obtenerIp();
     const fecha = new Date().toISOString();
     const pais = await this.obtenerPais(ip);
 
+      await this.contactosModel.crearContacto(email, name, mensaje, ip, fecha, pais);
 
+      const contactos = await this.contactosModel.obtenerAllContactos();
 
-
-    await this.contactosModel.crearContacto(email, name, mensaje, ip, fecha, pais);
-
-    const contactos = await this.contactosModel.obtenerAllContactos();
-
-    console.log(contactos);
-
-    // Enviar mensaje de confirmacion
-    res.send("Tu mensaje fue enviado con exito");
+      await this.enviarCorreo(email, name, mensaje, EMAIL_USER, EMAIL_DESTINO1);
+  
+      console.log(contactos);
+  
+      // Enviar mensaje de confirmacion
+      res.send("Tu mensaje fue enviado con exito, Se ha enviado un correo electrónico de confirmación.");
+    }
   }
-}
 
 module.exports = ContactosController;

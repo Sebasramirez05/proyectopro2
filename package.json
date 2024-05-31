@@ -14,7 +14,11 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "node-fetch": "^3.3.2",
+    "nodemailer": "^6.9.13",
     "sqlite3": "^5.1.7",
-    "sweetalert2": "^11.11.0"
+    "sweetalert2": "^11.6.13"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
   }
 }
