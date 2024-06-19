@@ -9,9 +9,6 @@
 <body>
   <div class="login">
     <h1>Login</h1>
-    <% if (error_msg) { %>
-      <p><%= error_msg %></p>
-    <% } %>
     <form action="/auth/login" method="POST">
       <div class="usuario">
         <input type="text" name="username" id="username" autocomplete="off" required>

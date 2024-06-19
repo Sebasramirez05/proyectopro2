@@ -388,6 +388,7 @@ html{
 .btn-enviar:hover{
     color: white;
     background-color: hsl(0, 97%, 29%);
+    cursor: pointer;
     transition: .5s ease-in-out;
 }
 .warning{
@@ -411,6 +412,15 @@ html{
 
 .form-contacto{
     background-color: #000000;
+}
+
+.btn-login{
+    display: flex;
+    margin: 50px auto;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /* SECCION RESPONSIVE */
